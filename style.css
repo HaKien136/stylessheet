@@ -1,54 +1,57 @@
-/* ========== DEFAULT: Mobile View ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 1em;
-  background-color: #f9f9f9;
+  padding: 1rem;
+  background-color: #fafafa;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #333;
 }
 
-.container {
-  display: block;
-}
-
-.container div {
+/* Mobile View (default): divs full width */
+div {
   width: 100%;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
+  background: #fff;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.container img {
+img {
   width: 100%;
   height: auto;
-  display: block;
+  border-radius: 0.5rem;
 }
 
-/* ========== TABLET VIEW: min-width 772px ========== */
+/* TABLET view: >= 772px */
 @media screen and (min-width: 772px) {
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .container div {
+  div {
     width: 45vw;
-    margin-bottom: 1em;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1%;
   }
 
-  .container img {
+  img {
     max-height: 30vh;
-    width: 100%;
-    height: auto;
+    width: auto;
   }
 }
 
-/* ========== LARGE SCREEN VIEW: min-width 998px ========== */
+/* LARGE SCREEN view: >= 998px */
 @media screen and (min-width: 998px) {
-  .container div {
+  div {
     width: 30vw;
+    margin: 1%;
   }
 }
